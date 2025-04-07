@@ -1,0 +1,160 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+h2 {
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+/* Start Screen */
+#startScreen {
+    text-align: center;
+    padding: 20px;
+}
+
+.form-group {
+    margin-top: 30px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+/* Game Area */
+#gameArea {
+    padding: 20px;
+}
+
+.game-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-bottom: 30px;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.game-info p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.game-info span {
+    color: #e74c3c;
+}
+
+.dice-area {
+    text-align: center;
+    margin: 30px 0;
+}
+
+#diceDisplay {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: 2px solid #e74c3c;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+#gameMessage {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 18px;
+    min-height: 50px;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+#newGameButton {
+    display: block;
+    margin: 20px auto;
+    background-color: #2ecc71;
+}
+
+#newGameButton:hover {
+    background-color: #27ae60;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .game-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    button {
+        width: 100%;
+        max-width: 200px;
+    }
+}

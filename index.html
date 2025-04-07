@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pig Dice Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎲 Pig Dice Game 🎲</h1>
+        
+        <div id="startScreen">
+            <h2>Welcome to Pig!</h2>
+            <p>Roll the dice and try to reach 100 points in as few rounds as possible.</p>
+            <p>Be careful! If you roll a 1, you lose all points for that round.</p>
+            
+            <div class="form-group">
+                <input type="text" id="playerNameInput" placeholder="Enter your name" required>
+                <button id="startButton" onclick="startGame()">Start Game</button>
+            </div>
+        </div>
+
+        <div id="gameArea" style="display:none;">
+            <div class="game-info">
+                <p>👤 Player: <span id="playerName"></span></p>
+                <p>🎯 Total Score: <span id="totalScore">0</span></p>
+                <p>🎲 Round Score: <span id="roundScore">0</span></p>
+                <p>🔁 Rounds Played: <span id="roundsPlayed">0</span></p>
+            </div>
+            
+            <div class="dice-area">
+                <p>Last Roll:</p>
+                <div id="diceDisplay">
+                    <span id="lastRoll">-</span>
+                </div>
+            </div>
+            
+            <div class="game-controls">
+                <button id="rollButton" onclick="rollDice()">🎲 Roll Dice</button>
+                <button id="freezeButton" onclick="freezeScore()">❄️ Freeze</button>
+            </div>
+            
+            <div id="gameMessage"></div>
+            
+            <button id="newGameButton" onclick="resetGame()" style="display:none;">Play Again</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
