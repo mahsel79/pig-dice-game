@@ -105,3 +105,10 @@ function resetGameState() {
     roundsPlayed = 0;
     gameOver = false;
 }
+
+// Add event listener for Enter key in name input
+document.getElementById("playerNameInput").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        startGame();
+    }
+});
